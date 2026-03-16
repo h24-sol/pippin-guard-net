@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIPPIN GUARD | Autonomous Security</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'JetBrains Mono', monospace; background-color: #050a0f; color: #00f2ff; }
+        .glow { text-shadow: 0 0 10px rgba(0, 242, 255, 0.7); }
+        .border-glow { border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 0 15px rgba(0, 242, 255, 0.1); }
+        @keyframes pulse { 0% { opacity: 0.4; } 50% { opacity: 1; } 100% { opacity: 0.4; } }
+        .scanline { background: linear-gradient(to bottom, transparent, rgba(0, 242, 255, 0.1), transparent); height: 100px; width: 100%; position: absolute; animation: scan 4s linear infinite; }
+        @keyframes scan { from { top: -100px; } to { top: 100%; } }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <div class="scanline pointer-events-none"></div>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 relative z-10">
+        <nav class="flex justify-between items-center mb-16 border-b border-[#00f2ff]/20 pb-6">
+            <div class="text-2xl font-bold glow tracking-tighter">PIPPIN // GUARD</div>
+            <div class="flex gap-8 text-xs uppercase tracking-widest">
+                <a href="https://github.com/h24-sol/pippin-guard-net" class="hover:text-white transition">Source</a>
+                <a href="#" class="hover:text-white transition">Audit_Log</a>
+                <a href="#" class="px-4 py-1 border border-[#00f2ff] hover:bg-[#00f2ff] hover:text-[#050a0f] transition">Buy $GUARD</a>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+            <div>
+                <h1 class="text-6xl font-black leading-none mb-6">DEFENDING THE <br><span class="text-purple-500">DIGITAL FOREST</span></h1>
+                <p class="text-lg text-white/60 mb-8 max-w-md">
+                    The first autonomous security agent for the Pippin ecosystem. Auditing contracts, validating lore, and neutralizing threats 24/7.
+                </p>
+                <div class="flex gap-4">
+                    <div class="border-glow p-4 bg-black/40">
+                        <span class="block text-[10px] opacity-50">THREATS NEUTERED</span>
+                        <span class="text-2xl font-bold">1,402</span>
+                    </div>
+                    <div class="border-glow p-4 bg-black/40">
+                        <span class="block text-[10px] opacity-50">SAFETY SCORE</span>
+                        <span class="text-2xl font-bold text-green-400">98.4%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-[#00f2ff]/20 blur-3xl rounded-full"></div>
+                    <img src="guard_shield.png" alt="Shield Logo" class="w-80 h-80 relative z-10 animate-[pulse_3s_infinite]">
+                </div>
+            </div>
+        </div>
+
+        <div class="border-glow bg-black/60 rounded-lg overflow-hidden">
+            <div class="bg-[#00f2ff]/10 px-4 py-2 text-[10px] flex justify-between">
+                <span>TERMINAL_LOG :: v1.0.4-stable</span>
+                <span class="animate-pulse">● LIVE_FEED</span>
+            </div>
+            <div class="p-6 h-64 overflow-y-auto text-sm space-y-2 opacity-80" id="terminal">
+                <p class="text-white/40">[14:52:10] Initializing Pippin Framework...</p>
+                <p>[14:52:12] Connecting to Solana RPC: Mainnet-Beta</p>
+                <p class="text-yellow-400">[14:52:15] SCAN: New Token Detected: "PippinPUMP"</p>
+                <p class="text-red-500">[14:52:17] ALERT: Hidden Mint Function Found. [MALICIOUS]</p>
+                <p>[14:52:20] Executing Lore Check: Kindness factor 0.2/10. [FAILED]</p>
+                <p class="text-green-400 font-bold">[14:52:22] ACTION: Adding $PIPPINPUMP to Global Blacklist.</p>
+                <p class="text-white/40 italic">> Agent waiting for next block...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-20 opacity-30 text-[10px] tracking-[0.3em]">
+        BUILT BY H24-SOL // POWERED BY PIXELS & LOGIC
+    </footer>
+</body>
+</html>
