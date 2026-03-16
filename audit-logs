@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-16T15:00:00Z",
+  "target_token": "$SCAM_COIN_XYZ",
+  "reasoning_path": [
+    "Step 1: Analyzed contract source code on Solana Explorer.",
+    "Step 2: Detected 'Mint Authority' is NOT disabled. [RISK: HIGH]",
+    "Step 3: Scanned X sentiment; found 4 duplicate 'bot' shill patterns.",
+    "Step 4: Lore Check: Aggressive language detected. [PIPPIN_LORE_SCORE: 2/10]"
+  ],
+  "final_action": "FLAG_AND_BLACKLIST"
+}
